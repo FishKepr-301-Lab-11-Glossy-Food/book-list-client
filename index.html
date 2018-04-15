@@ -8,23 +8,25 @@
   <link rel="stylesheet" href="styles/layout.css">
 
   <script id="book-template" type="text/x-handlebars-template">
-        <h1>{{title}}</h1>
-        <h1>{{author}}</h1>
+    <li>{{author}} : {{title}}</li>
   </script>
 
 </head>
 <body>
   <h1>Books App</h1>
-  <section id="stats">
+  <section id = "stats">
     <h1>Total Books: </h1>
   </section>
   <section id="books-info">
     <h1>My Books</h1>
-    <ul>
-      <li>book</li>
-      <li>author</li>
+    <ul id = "booklist">
     </ul>
   </section>
+
+  <section id = "about">
+    <h1>About</h1>
+  </section>
+
   <footer>
     <img src = "http://via.placeholder.com/350x150" />
   </footer>
