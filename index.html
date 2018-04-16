@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Book List Application</title>
-  <link rel="stylesheet" href="styles/layout.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book List Application</title>
+    <!-- <link rel="stylesheet" href="styles/layout.css"> -->
 
-  <script id="book-template" type="text/x-handlebars-template">
-    <li>{{author}} : {{title}}</li>
-  </script>
+    <script id="book-template" type="text/x-handlebars-template">
+      <li>{{author}} : {{title}}</li>
+    </script>
 
-</head>
-<body>
-  <h1>Books App</h1>
-  <section id = "stats">
-    <h1>Total Books: </h1>
-  </section>
-  <section id="books-info">
-    <h1>My Books</h1>
-    <ul id = "booklist">
-    </ul>
-  </section>
+  </head>
+  <body>
+    <section class = "book-view">
+      <h1>Books App</h1>
+      <section id = "stats">
+        <h1>Total Books: </h1>
+      </section>
 
-  <section id = "about">
-    <h1>About</h1>
-  </section>
+      <section id="books-info">
+        <h1>My Books</h1>
+        <ul id = "booklist"></ul>
+      </section>
 
-  <footer>
-    <img src = "http://via.placeholder.com/350x150" />
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-  <script src="./scripts/task.js"></script>
-  <script src-"./scripts/books.js"></script>
-</body>
+      <section id = "about">
+        <h1>About</h1>
+      </section>
+    </section>
+    <footer>
+      <img src = "http://via.placeholder.com/350x150" />
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="./scripts/models/task.js"></script>
+    <script src="./scripts/views/book-view.js"></script>
+  </body>
 </html>
