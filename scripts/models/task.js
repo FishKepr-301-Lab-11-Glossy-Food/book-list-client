@@ -10,6 +10,7 @@ ENV.developmentApiUrl = 'https://localhost:3000';
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
 (function(module) {
+
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
