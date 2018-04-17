@@ -1,0 +1,53 @@
+header  h1 {
+  padding: 6% 0 10% 20%;
+}
+
+header img {
+  width: 15%;
+  float: left;
+  padding: 2%; 
+}
+
+#books-info {
+  padding: 5% 9% 10% 0;
+}
+
+footer [class*="icon-"] {
+  float: right;
+  margin: 1%;
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+ul {
+  list-style-type: none;
+  font-size: 1.5em;
+}
+
+.encase-books{
+  margin-bottom: 10%;
+  border-radius: 5px;
+  background-color: #9B9B9B;
+}
+
+.encase-books img {
+  margin-top: 5%;
+  padding-left: 30%;
+}
+
+.encase-books li {
+  color: rgb(159, 159, 159);
+  padding: 5% 0 0 5%;
+  background-color: #4A4A4A;
+}
+
+.itali {
+  font-style: italic;
+  font-size: .9em;
+}

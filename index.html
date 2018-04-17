@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Book List Application</title>
-    <!-- <link rel="stylesheet" href="styles/layout.css"> -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
 
     <script type="text/x-handlebars-template" id="error-template">
       <p>{{status}}: {{statusText}}</p>
     </script>
     <script id="book-template" type="text/x-handlebars-template">
-      <li>{{author}} : {{title}}</li>
+      <div class = "encase-books">
+        <img src="{{img_url}}">
+        <li>{{title}}</li>
+        <li class="itali">{{author}}</li>
+      </div>
     </script>
 
   </head>
@@ -19,21 +28,29 @@
     <section class="error-view container">
       <h3>Something went wrong</h3>
     <section id="error-message"></section>
-  </section>
+    </section>
     <section class = "book-view">
-      <h1>Books App</h1>
-      <section id = "stats">
-        <h1>Total Books: </h1>
-      </section>
+      <header>
+        <img src ="CF.png" />
+        <h1>Books App</h1>
+      </header>
+      <main>
+        <section id = "stats">
+          <h1>Total Books: </h1>
+          <h1>My Books</h1>
+        </section>
 
-      <section id="books-info">
-        <h1>My Books</h1>
-        <ul id = "booklist"></ul>
-      </section>
-
-      <section id = "about">
-        <h1>About</h1>
-      </section>
+        <section id="books-info">
+          <ul id = "booklist"></ul>
+        </section>
+      </main>
+      <footer>
+        <section id = "about">
+          <span class="icon-linkedin"></span>
+          <span class="icon-github"></span>
+          <h1>About</h1>
+        </section>
+      </footer>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
