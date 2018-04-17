@@ -2,7 +2,7 @@
 console.log('entering book-view.js');
 var app = app || {};
 (function (module) {
-  let bookView = [];
+  let bookView = {};
 
   bookView.initIndexPage = function() {
     $('.container').hide();
