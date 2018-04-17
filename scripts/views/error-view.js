@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('entering error-view.js');
 var app = app || {};
 
 (function (module) {
