@@ -1,12 +1,12 @@
 'use strict'
-console.log('entering tasks.js');
+
 var app = app || {};
 
 const ENV = {};
 
 ENV.isProduction = window.location.protocol === 'https:';
 ENV.productionApiUrl = 'https://pk-jl-booklist.herokuapp.com';
-ENV.developmentApiUrl = 'https://localhost:3000';
+ENV.developmentApiUrl = 'http://localhost:3000';
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
 (function(module) {
@@ -17,8 +17,6 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
   }
 
   function Book(bookData) {
-    console.log('entering Book function', bookData);
-
     Object.keys(bookData).forEach(key => this[key] = bookData[key]);
   }
 
@@ -36,7 +34,6 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
   Book.fetchAll = callback => {
     $.get(`${ENV.apiUrl}/api/v1/books`)
       .then(results => {
-        console.log(results);
         Book.loadAll(results);
       })
       .then(callback)

@@ -1,5 +1,5 @@
 'use strict'
-console.log('entering book-view.js');
+
 var app = app || {};
 (function (module) {
   let bookView = {};
@@ -13,6 +13,5 @@ var app = app || {};
 })(app)
 
 $(function () {
-  console.log('IIFE working');
   app.Book.fetchAll(app.bookView.initIndexPage);
 })
