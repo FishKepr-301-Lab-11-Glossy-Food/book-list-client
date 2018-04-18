@@ -2,11 +2,15 @@
 
 var app = app || {};
 
+//creates object ENV
 const ENV = {};
 
+//creates a boolean: looking for https:.  If true, production, else development
 ENV.isProduction = window.location.protocol === 'https:';
 ENV.productionApiUrl = 'https://pk-jl-booklist.herokuapp.com';
 ENV.developmentApiUrl = 'http://localhost:3000';
+
+//tertiary: is it pproduction?  if yes, use prod path, else dev path
 ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
 
 (function(module) {
@@ -16,8 +20,10 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
     module.errorView.initErrorPage(err);
   }
 
+  //constructor function
   function Book(bookData) {
     Object.keys(bookData).forEach(key => this[key] = bookData[key]);
+    //Object.assign(this, bookdata); is even refactored portion.  look up in MDN
   }
 
   Book.all = [];
@@ -32,6 +38,7 @@ ENV.apiUrl = ENV.isProduction ? ENV.productionApiUrl : ENV.developmentApiUrl;
   }
 
   Book.fetchAll = callback => {
+    //connects from server to client
     $.get(`${ENV.apiUrl}/api/v1/books`)
       .then(results => {
         Book.loadAll(results);
